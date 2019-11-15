@@ -1,7 +1,26 @@
 <div class="container">
-  <h1>Home page</h1>
-  <% @jobs.each do |k, v|%>
-  <%= k %><%= v %>
-  <% end %>
+  <br><br>
+  <table class="table table-sm table-striped table-bordered table-hover">
+      <thead class="thead-light">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Company</th>
+            <th scope="col">Published</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Link</th>
+          </tr>
+      </thead>
+      <tbody>
+      <% @jobs['items'].each do |i| %>
+          <tr>
+            <td><%= i["name"] %></td>
+            <td><%= i["department"] %></td>
+            <td><%= i["published_at"] %></td>
+            <td><%= i["salary"] %></td>
+            <td><%= link_to 'Link', i["apply_alternate_url"] %></td>
+          </tr>
+      <% end %>
+      </tbody>
+  </table>
 </div>
 
