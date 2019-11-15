@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
- <a class="nav-link home-link" href="/"><b>Home</b><span class="sr-only"></span></a>
+  <%= link_to 'Home', root_path, class: "nav-link home-link"%>
+ <span class="sr-only"></span>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,7 +8,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/already_cv_sent">Already CV Sent</a>
+        <%= link_to 'Already CV Sent', already_cv_sent_path, class: "nav-link" %>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
