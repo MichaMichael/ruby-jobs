@@ -3,14 +3,9 @@ class HomeController < ApplicationController
     require 'net/http'
     require 'json'
 
-    @url = 'https://api.hh.ru/vacancies'
+    @url = 'https://api.hh.ru/vacancies?text=ruby'
     @uri = URI(@url)
     @responce = Net::HTTP.get(@uri)
     @jobs = JSON.parse(@responce)
-  end
-
-
-
-  def already_cv_sent
   end
 end

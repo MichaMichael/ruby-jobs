@@ -1,23 +1,28 @@
 <div class="container">
   <br><br>
-  <table class="table table-sm table-striped table-bordered table-hover">
+
+  <table class="table table-hover">
       <thead class="thead-light">
           <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Company</th>
-            <th scope="col">Published</th>
-            <th scope="col">Salary</th>
-            <th scope="col">Link</th>
+            <th style="width: 40%">Name</th>
+            <th style="width: 25%">Published</th>
+            <th style="width: 25%">Salary</th>
+            <th style="width: 10%">Link</th>
           </tr>
       </thead>
       <tbody>
       <% @jobs['items'].each do |i| %>
           <tr>
-            <td><%= i["name"] %></td>
-            <td><%= i["department"] %></td>
-            <td><%= i["published_at"] %></td>
-            <td><%= i["salary"] %></td>
-            <td><%= link_to 'Link', i["apply_alternate_url"] %></td>
+            <td style="width: 40%"><%= i["name"] %></td>
+            <td style="width: 25%"><%= Time.parse(i["published_at"]).to_date %></td>
+            <td style="width: 25%">
+              <% if i["salary"] %>
+                <%= i["salary"]["from"] %> - <%= i["salary"]["to"] %> 
+                <%= 'руб' if i["salary"]["currency"] == 'RUR' %>
+                <%= '$' if i["salary"]["currency"] == 'USD' %>
+              <% end %>
+            </td>
+            <td style="width: 10%"><%= link_to 'Link', i["alternate_url"] %></td>
           </tr>
       <% end %>
       </tbody>
