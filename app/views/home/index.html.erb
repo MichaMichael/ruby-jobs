@@ -13,8 +13,8 @@
       <% @jobs['items'].each do |i| %>
           <tr>
             <td style="width: 40%"><%= i["name"] %></td>
-            <td style="width: 25%"><%= Time.parse(i["published_at"]).to_date %></td>
-            <td style="width: 25%">
+            <td style="width: 15%"><%= Time.parse(i["published_at"]).to_date %></td>
+            <td style="width: 35%">
               <% if i["salary"] %>
                 <%= i["salary"]["from"] %> - <%= i["salary"]["to"] %>
                 <%= 'руб' if i["salary"]["currency"] == 'RUR' %>
