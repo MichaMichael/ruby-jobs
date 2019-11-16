@@ -16,7 +16,7 @@
             <td style="width: 15%"><%= Time.parse(i["published_at"]).to_date %></td>
             <td style="width: 35%">
               <% if i["salary"] %>
-                <%= i["salary"]["from"] %> - <%= i["salary"]["to"] %>
+                <%= number_with_delimiter(i["salary"]["from"]) %> - <%= number_with_delimiter(i["salary"]["to"]) %>
                 <%= 'руб' if i["salary"]["currency"] == 'RUR' %>
                 <%= '$' if i["salary"]["currency"] == 'USD' %>
               <% end %>
