@@ -1,19 +1,18 @@
 @import "bootstrap";
 
-a:hover {
-  text-decoration: none;
-}
-
-.home-link {
+.home-title {
+  margin-left: 20px;
   color: #C8C8C8;
+  font-weight: bold;
 }
 
-.home-link:hover {
-  color: #E8E7E7;
+a:visited {
+  color: red;
 }
 
 .any-question, .any-question  a {
   color: #C8C8C8;
+  margin-top: 10px;
 }
 
 .any-question , .any-question a:hover {
