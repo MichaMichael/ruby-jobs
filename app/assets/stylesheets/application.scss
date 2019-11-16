@@ -1,5 +1,9 @@
 @import "bootstrap";
 
+a:hover {
+  text-decoration: none;
+}
+
 .home-link {
   color: #C8C8C8;
 }
@@ -8,10 +12,10 @@
   color: #E8E7E7;
 }
 
-.any-question , a {
+.any-question, .any-question  a {
   color: #C8C8C8;
 }
 
-.any-question , a:hover {
+.any-question , .any-question a:hover {
   color: #E8E7E7;
 }

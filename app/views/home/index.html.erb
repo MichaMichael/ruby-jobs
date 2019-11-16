@@ -22,7 +22,7 @@
                 <%= '$' if i["salary"]["currency"] == 'USD' %>
               <% end %>
             </td>
-            <td style="width: 10%"><%= link_to 'Link', i["alternate_url"] %></td>
+            <td style="width: 10%"><%= link_to 'Link', i["alternate_url"], class: "btn btn-link"%></td>
           </tr>
       <% end %>
       </tbody>
