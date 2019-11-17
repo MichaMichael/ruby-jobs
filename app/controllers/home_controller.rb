@@ -3,10 +3,10 @@ class HomeController < ApplicationController
     require 'net/http'
     require 'json'
 
-    @url = 'https://api.hh.ru/vacancies?text=ruby&order_by=relevance&search_period=&per_page=100'
+    url = 'https://api.hh.ru/vacancies?text=ruby&order_by=relevance&search_period=&per_page=100'
+    html = URI(url)
 
-    @uri = URI(@url)
-    @responce = Net::HTTP.get(@uri)
-    @jobs = JSON.parse(@responce)
+    responce = Net::HTTP.get(html)
+    @jobs = JSON.parse(responce)
   end
 end
