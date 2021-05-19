@@ -6,7 +6,7 @@ ruby '2.5.1'
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 3.12'
+gem 'puma', '~> 4.3'
 gem 'rails', '~> 5.2.3'
 gem 'rubocop', require: false
 gem 'sass-rails', '~> 5.0'
